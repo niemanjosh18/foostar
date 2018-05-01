@@ -1,0 +1,9 @@
+{% if top_10_singles %}
+    <ul>
+    {% for player in top_10_singles %}
+        <li><a href="{% url "foos:singles_top" %}>{{ player.username }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

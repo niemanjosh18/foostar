@@ -1,0 +1,9 @@
+{% if top_10_doubles %}
+    <ul>
+    {% for player in top_10_doubles %}
+        <li><a href="/foos/doubles/{{ player.id }}/">{{ player.username }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
